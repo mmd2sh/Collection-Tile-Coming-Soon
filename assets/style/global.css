@@ -1,0 +1,130 @@
+/* ECUT Style by https://mohamad-sh.ir @ 1402/12/27; */
+/* MARK: FONT FACES */
+@font-face {
+    font-family: IRANYekanXVF;
+    src: url('../fonts/IRANYekanXVF.woff') format('woff-variations'),
+    /* will be the standard and works in Safari now */
+    url('../fonts/IRANYekanXVF.woff') format('woff');
+    /* for the other supporting browsers */
+    font-weight: 100 1000;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: IRANYekanX;
+    src: url('../fonts/IRANYekanX-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: IRANYekanX;
+    src: url('../fonts/IRANYekanX-bold.woff') format('woff');
+    font-weight: 700;
+}
+
+/* MARK: GENERAL */
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: IRANYekanX, tahoma;
+    min-height: 100vh;
+}
+
+@supports (font-variation-settings: normal) {
+	body {
+		font-family: IRANYekanXVF, tahoma;
+		/* font-variation-settings: 'wght' 400, 'dots' 4; */
+		/* farsi numbers */
+		-webkit-font-feature-settings: 'ss02';
+		font-feature-settings: 'ss02';
+		}
+}
+
+.flex-1 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex-center-both {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.grid-area-1 {
+    grid-area: 1/1;
+}
+
+.en-text {
+	-webkit-font-feature-settings: 'ss00';
+	font-feature-settings: 'ss00';
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+img,
+video,
+iframe,
+picture {
+    max-width: 100%;
+}
+
+.tooltip {
+    font-family: inherit;
+    pointer-events: none;
+}
+
+*,
+::before,
+::after {
+    /* outline: 1px solid pink !important; */
+}
+
+label:has(input) {
+	cursor: pointer;
+	user-select: none;
+}
+
+/* MARK: VARIABLES */
+:root {
+    --color-main: #263238;
+    --color-alt: #ff7300;
+    --color-success: #52b788;
+	--color-danger: #e5383a;
+	--header-height: 84px;
+}
+
+/* MARK: SELECTION */
+::-moz-selection {
+	background: var(--color-alt) !important;
+	color: var(--color-main) !important;
+}
+
+::selection {
+	background: var(--color-alt) !important;
+	color: var(--color-main) !important;
+}
+
+/* MARK: SCROLL */
+::-webkit-scrollbar-track { background: #ccc }
+::-webkit-scrollbar { width: 10px; height: 10px; background: #ccc }
+::-webkit-scrollbar-thumb { border-radius: 50px }
+::-webkit-scrollbar-thumb { border: 2px solid #ccc; background: var(--color-main) }
+::-webkit-scrollbar-thumb:hover { border-width: 0 }
+/* :root, * { scrollbar-width: thin; scrollbar-color: var(--color-main) #ccc } */
+
+html {
+	-ms-scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+}
