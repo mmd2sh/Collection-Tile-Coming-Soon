@@ -97,22 +97,21 @@ label:has(input) {
 
 /* MARK: VARIABLES */
 :root {
-    --color-main: #263238;
-    --color-alt: #ff7300;
+    --color-main: #af7e3c;
+    --color-alt: #00633c;
     --color-success: #52b788;
 	--color-danger: #e5383a;
-	--header-height: 84px;
 }
 
 /* MARK: SELECTION */
 ::-moz-selection {
 	background: var(--color-alt) !important;
-	color: var(--color-main) !important;
+	color: #fff !important;
 }
 
 ::selection {
 	background: var(--color-alt) !important;
-	color: var(--color-main) !important;
+	color: #fff !important;
 }
 
 /* MARK: SCROLL */
