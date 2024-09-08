@@ -129,7 +129,7 @@ html {
 }
 
 .main-wrap {
-    background: url(./assets/images/bg.jpg);
+    background: url('/assets/images/bg.jpg');
     background-position: center;
     background-size: cover;
 }
